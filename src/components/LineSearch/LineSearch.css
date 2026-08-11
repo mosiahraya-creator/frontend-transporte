@@ -1,0 +1,134 @@
+.line-search {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.line-search__container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.line-search__input {
+  width: 230px;
+  height: 55px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #222;
+  border-radius: 0;
+
+  background: #fff;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  outline: none;
+}
+
+.line-search__input::placeholder {
+  color: #222;
+  opacity: 1;
+}
+
+/* =========================
+   INPUT ACTIVO
+========================= */
+
+.line-search__input:focus {
+  box-shadow: inset 0 0 0 2px #ddd;
+}
+
+/* =========================
+   LIMPIAR
+========================= */
+
+.line-search__clear {
+  height: 55px;
+
+  padding: 0 25px;
+
+  border: 3px dashed #222;
+  border-left: none;
+
+  background: #fff;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.line-search__clear:hover {
+  background: #f1f1f1;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.line-search__home {
+  width: 60px;
+  height: 60px;
+
+  margin-left: 18px;
+
+  border: 3px solid #222;
+  border-radius: 50%;
+
+  background: #fff;
+
+  font-size: 27px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-search__home:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MENSAJE
+========================= */
+
+.line-search__message {
+  margin-top: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .line-search__container {
+    flex-wrap: wrap;
+  }
+
+  .line-search__input {
+    width: 180px;
+  }
+
+  .line-search__clear {
+    padding: 0 15px;
+  }
+
+  .line-search__home {
+    margin-left: 10px;
+  }
+}
