@@ -7,7 +7,7 @@ interface LineSearchProps {
 }
 
 const availableLines = [
-  "240A",
+  "24A",
   "240B",
   "4",
   "10A",

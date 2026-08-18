@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header/Header";
 import LineSearch from "../components/LineSearch/LineSearch";
 import RouteMap from "../components/RouteMap/RouteMap";
+import RouteDetails from "../components/RouteDetails/RouteDetails";
 
 import { authRepository } from "../repositories/authRepository";
 
@@ -99,24 +100,20 @@ function HomePage() {
 
         </section>
 
-        {/* ================================
-            BUSCADOR DE LÍNEAS
-        ================================= */}
+        {/* MAPA */}
+        <section className="home-page__map-section">
 
+          <RouteMap />
+
+        </section>
+
+        {/* BUSCADOR DE LÍNEAS */}
         <section className="home-page__line-section">
-
-          <div className="home-page__section-title">
-
-          </div>
 
           <LineSearch
             onSearch={handleLineSearch}
             onHome={handleHome}
           />
-
-          {/* ================================
-              LÍNEA SELECCIONADA
-          ================================= */}
 
           {selectedLine && (
             <div className="home-page__selected-line">
@@ -133,20 +130,7 @@ function HomePage() {
           )}
 
         </section>
-
-        {/* ================================
-            MAPA
-        ================================= */}
-
-        <section className="home-page__map-section">
-
-          <div className="home-page__section-title">
-
-          </div>
-
-          <RouteMap />
-
-        </section>
+        <RouteDetails selectedLine={selectedLine} />
 
       </main>
     </>

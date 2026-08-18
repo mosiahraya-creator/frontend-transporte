@@ -1,0 +1,163 @@
+.route-details {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 25px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.route-details__route,
+.route-details__tourism {
+  background: #ffffff;
+  border: 2px solid #1f1f1f;
+  padding: 25px;
+  box-shadow: 5px 5px 0 #1f1f1f;
+}
+
+.route-details h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* =========================
+   PARADAS
+========================= */
+
+.route-details__stops {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+}
+
+.route-details__stop {
+  display: flex;
+  gap: 12px;
+  min-height: 48px;
+  position: relative;
+}
+
+.route-details__point {
+  font-size: 22px;
+  font-weight: bold;
+  color: #164c9c;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.route-details__stop strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.route-details__stop p {
+  margin: 3px 0 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* =========================
+   ESTADÍSTICAS
+========================= */
+
+.route-details__stats {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #ddd;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.route-details__stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.route-details__stats strong {
+  font-size: 0.85rem;
+}
+
+.route-details__stats span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* =========================
+   TURISMO
+========================= */
+
+.route-details__subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.route-details__tourist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.route-details__tourist {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.route-details__tourist-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.route-details__tourist h3 {
+  margin: 0 0 5px;
+  font-size: 0.95rem;
+}
+
+.route-details__tourist p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* =========================
+   SIN LÍNEA
+========================= */
+
+.route-details--empty {
+  display: block;
+  text-align: center;
+  padding: 30px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .route-details {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .route-details__stops {
+    grid-template-columns: 1fr;
+  }
+
+  .route-details__stats {
+    flex-direction: column;
+  }
+}
